@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css?family=Ms+Madi|Josefin+Sans:300,400|Aboreto');
+
+/*Oswald|Marcellus|Bodoni+Moda|Italiana|Antic+Didone|Cormorant+SC|Noto+Serif+Display|Licorice|Meow+Script|Allura|Alex+Brush*/
+
+:root {
+    --main-text-color: #444;
+    --peach-color: #ffd5cb;
+    --forest-color: #203123;
+    --leaf-color: #56612f;
+    --white-color: #fafafa;
+    --gold-color: #d7c791;
+    --teal-color: #8f9f91;
+    --skin-color: #f6e6e1;
+    --cream-color: #fbf1e3;
+}
+
+@viewport{
+    zoom: 1.0;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--main-text-color);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 0 0 0;
+    background-image: url("assets/75800-white.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    overflow-x: hidden;
+    height: auto;
+    width: auto;
+}
+
+/************************/
+/* Page load animations */
+/************************/ 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/******************/
+/* Navigation bar */
+/******************/
+
+nav {
+    background-color: var(--white-color);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+.menu-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    list-style-type: none;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    width: 75%;
+    max-width: 900px;
+    min-width: 800px;
+}
+
+.menu-list-item {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 50px;
+    padding: 0;
+    min-width: 90px;
+    width: fit-content;
+    margin: 0 1% 0 1%;
+}
+
+.menu-list-item a {
+    display: block;
+    cursor: pointer;
+}
+
+.menu-list-item:hover a {
+    text-decoration: none;
+    color: rgba(153, 153, 153, 1);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+ /* Dropup menu button */
+
+.dropbtn {
+    border: none;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-family: 'Josefin Sans', serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: var(--main-text-color);
+    background-color: var(--white-color);
+}
+
+.dropup {
+    display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+/* Dropup content (hiddent by default) */
+
+.dropup-content {
+    position: absolute;
+    bottom: 40px;
+    background-color: #f1f1f1;
+    width: 100%;
+    min-width: 160px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Links inside the dropup */
+
+.dropup-content a.hyperlink {
+  color: black;
+  padding: 12px 16px;
+  font-size: 1.2em;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+/* Change color of dropup links on hover */
+
+.dropup-content a.hyperlink:hover {
+    background-color: var(--teal-color);
+    color: var(--white-color);
+}
+
+/* Show the dropup menu on hover */
+
+.dropup:hover .dropup-content{
+  display: block;
+  background-color: var(--white-color);
+      opacity: 1;
+    height: auto;
+}
+
+/* Change the background color of the dropup button when the dropup content is shown */
+
+.dropup:hover .dropbtn{
+  background-color: var(--teal-color);
+  color: var(--white-color);
+} 
+
+@media(min-width: 480px) {
+    .menu-list-item { display: inline-block; }
+    .menu-list-item a { min-width: 90px; }
+}
+
+@media (max-width: 720px) {
+    nav {
+        display: none;
+    }
+    .dropup {
+        display: inline-block;
+    }
+}
+
+/*******************/
+/* Text formatting */
+/*******************/
+
+.names {
+    text-align: center;
+    font-family: 'Aboreto', sans-serif;
+    font-size: 4.5em;
+    font-variant: small-caps;
+    color: var(--teal-color);
+    line-height: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.names .et {
+    font-family: 'Ms Madi', cursive;
+    font-size: 0.5em;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    display: inline;
+    vertical-align: middle;
+}
+
+h1 {
+    font-family: 'Ms Madi', cursive;
+    font-size: 3em;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    color: var(--main-text-color);
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--main-text-color);
+}
+
+.party-name {
+    font-family: 'Aboreto', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--main-text-color);
+    text-align: left;
+}
+
+.party-role {
+    font-family: 'Ms Madi', cursive;
+    font-size: 1.6em;
+    color: var(--main-text-color);
+    text-align: left;
+    white-space: nowrap;
+}
+
+p, q {
+    font-size: 1.2em;
+}
+
+.text p {
+    text-indent: 2em;
+}
+
+q:before { 
+    content: open-quote;
+} 
+
+q:after { 
+    content: close-quote;
+}
+
+a.hyperlink {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+a.external {
+    color: var(--main-text-color);
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
+}
+
+a.hyperlink:hover, a.external:hover {
+    color: var(--teal-color);
+    text-decoration: none;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: var(--white-color);
+  background: var(--teal-color);
+}
+
+::selection {
+  color: var(--white-color);
+  background: var(--teal-color);
+}
+
+/***************/
+/* Splash page */
+/***************/
+
+#splash {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 0;
+    background-color: transparent;
+    position: relative;
+}
+
+#splash-name {
+    text-align: center;
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#splash-anchor {
+    text-align: center;
+    font-family: 'Aboreto', sans-serif;
+    font-size: 4.7em;
+    font-variant: small-caps;
+    color: var(--teal-color);
+    line-height: 0.9em;
+    letter-spacing: 0.1em;
+    position: absolute;
+}
+
+#splash-lea {
+    animation: fadeIn 2s;
+}
+
+#splash-mark {
+    animation: fadeIn 4s;
+}
+
+#splash-anchor .et {
+    font-family: 'Ms Madi', cursive;
+    font-size: 0.5em;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    display: block;
+    animation: fadeIn 3s;
+}
+
+#splash-decor {
+    max-height: 100vh;
+    max-width: 100vw;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 740px), (max-height: 730px) {
+    #splash-name {
+        width: 33vmin;
+        height: 33vmin;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);       
+    }
+    #splash-anchor {
+        font-size: 10vmin;
+    }
+}
+
+/*******************/
+/* Art Deco border */
+/*******************/
+
+.deco {
+    border: 4px solid;
+    border-color: var(--gold-color);
+    position: relative;
+}
+
+.deco:before, .deco:after {
+    border: 2px solid;
+    border-color: var(--gold-color);
+    content: "";
+    position: absolute;
+    z-index: -1;  
+}
+
+.deco:before {
+    top: -10px;
+    right: 4px;
+    bottom: -10px;
+    left: 4px;
+}
+
+.deco:after {
+    top: 4px;
+    right: -10px;
+    bottom: 4px;
+    left: -10px;
+}
+
+@media (max-width: 720px) {
+
+    .deco, .deco:before, .deco:after {
+        border-left: none;
+        border-right: none;
+    }
+
+}
+
+/************/
+/* Sections */
+/************/
+
+.page {
+    text-align: center;
+    width: 75%;
+    max-width: 900px;
+    margin: 100px auto 100px auto;
+}
+
+.content {
+    margin: 6px;
+    background-color: var(--white-color);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.text {
+    padding: 0px 10% 20px 10%;
+    text-align: left;
+}
+
+.float {
+    padding: 0px 10% 20px 10%;
+}
+
+.icontainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+#google-form {
+    border: none;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    min-height: 150vh;
+}
+
+#engagement-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 720px) {
+    .page {
+        width: 100%;
+    }
+    .content {
+        margin: 6px 0px 6px 0px;
+    }
+    .text {
+        padding: 10px;
+    }
+    .float {
+        padding: 10px;
+    }
+}
+
+/******************/
+/* Party profiles */
+/******************/
+
+.profiles {
+    display: flex;
+    padding: 0px 10% 20px 10%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+.groomsmen {
+    flex-flow: row-reverse wrap;
+}
+
+.side-a {
+    width: 38.2%;
+    padding: 10px;
+
+}
+
+.side-b {
+    width: 61.8%;
+    padding: 0px 0px 0px 20px;
+    text-align: left;
+
+}
+
+.groomsmen .side-b {
+    padding: 0px 20px 0px 0px;
+}
+
+@media (max-width: 720px) {
+    .side-a, .side-b {
+        width: 100%;
+    }
+}
+
+/**********/
+/* Images */
+/**********/
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.framed {
+    margin: 0px 30px 30px 0px;
+    float: left;
+    box-shadow: -50px -50px 0 -40px var(--gold-color), 50px 50px 0 -40px var(--gold-color), 0 3px 10px rgb(0 0 0 / 0.4);
+    width: 100%;
+    height: auto;
+}
+
+img.story {
+    display: inline;
+    width: 50%;
+}
+
+
+.divider {
+    width: 80%;
+    max-width: 768px;
+    top: -20px;
+}
+
+@media (max-width: 720px) {
+    img.framed {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+    .story {
+        width: 100%;
+    }
+}
+
+/*/////////*/
+/* Gallery */
+/*/////////*/
+
+a.thumbnail, a.thumbnail:hover {
+  text-decoration: none;
+  background-color: unset;
+  background: var(--main-bg-color);
+  width: 100%;
+}
+
+img.thumbnail {
+  width: 100%;
+  transition: transform 2s, filter 0.1s ease-in-out;
+}
+
+img.thumbnail:hover {
+  filter: opacity(70%);
+}
+
+a.lightbox, a.lightbox:hover {
+  /** Default lightbox to hidden */
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
+  /** Position and style */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+
+a.lightbox img {
+  /** Pad the lightbox image */
+  max-width: 90vw;
+  max-height: 90vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99;
+}
+
+a.lightbox:target {
+  /** Remove default browser outline */
+  outline: none;
+
+  /** Unhide lightbox **/
+  visibility: visible;
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+
+.photo-column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.photo-column .responsive {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 720px) {
+  .photo-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+

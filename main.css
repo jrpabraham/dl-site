@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One|La+Belle+Aurore|WindSong|Italiana|Qwitcher+Grypen:400,700|Allura|Josefin+Sans:100,200,300');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|La+Belle+Aurore|Jost:100,200,300|Italiana|Qwitcher+Grypen:400,700|Allura|Josefin+Sans:100,200,300');
 
 /*Oswald|Marcellus|Bodoni+Moda|Italiana|Antic+Didone|Cormorant+SC|Noto+Serif+Display|Licorice|Meow+Script|Allura|Alex+Brush*/
 
@@ -60,13 +60,14 @@ body {
 /******************/
 
 nav {
-    background-color: var(--snow-color);
+    background-color: none;
     overflow: hidden;
     position: fixed;
-    left: 0;
+    left: 10vw;
     width: 20%;
     height: 100%;
     max-height: 512px;
+    max-width: 200px;
 }
 
 ul {
@@ -151,6 +152,7 @@ h3 {
 
 p, q {
     font-size: 1.2em;
+    text-align: justify;
 }
 
 .text p {
@@ -314,17 +316,39 @@ a.hyperlink:hover, a.external:hover {
 /* Sections */
 /************/
 
+.line-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.line-box hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    width: 80%;
+    background-color: #000; /* You can customize the color */
+    margin: 0 30px; /* Adjust the margin as needed */
+}
+
 .page {
-    position: absolute;
-    width: 85%;
-    left: 20%;
+    position: relative;
+    width: 80%;
+    left: 200px;
+    padding: 5% 5% 5% 0;
 }
 
 .content {
-    margin: 6px;
-    background-color: var(--white-color);
-    overflow: hidden;
-    padding: 20px;
+    height: 80vh;
+    width: 80vw;
+    margin: 10vh auto 10vh auto;
+    background-color: none;
+    border: solid;
+    border-color: var(--gray-color);
+    border-width: 4px;
+    overflow: auto;
 }
 
 .text {
@@ -429,11 +453,10 @@ img {
     margin-right: auto;
 }
 
-img.framed {
+img.inline {
     margin: 0px 30px 30px 0px;
     float: left;
-    box-shadow: -50px -50px 0 -40px var(--gold-color), 50px 50px 0 -40px var(--gold-color), 0 3px 10px rgb(0 0 0 / 0.4);
-    width: 100%;
+    width: 40%;
     height: auto;
 }
 

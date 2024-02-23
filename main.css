@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One|La+Belle+Aurore|Jost:100,200,300|Italiana|Qwitcher+Grypen:400,700|Allura|Josefin+Sans:100,200,300');
+@import url('https://fonts.googleapis.com/css?family=Gloock|Marcellus+SC|Bodoni+Moda|Poiret+One|La+Belle+Aurore|Jost:100,200,300|Italiana|Qwitcher+Grypen:400,700|Allura|Josefin+Sans:100,200,300|Playfair+Display+SC ');
 
 /*Oswald|Marcellus|Bodoni+Moda|Italiana|Antic+Didone|Cormorant+SC|Noto+Serif+Display|Licorice|Meow+Script|Allura|Alex+Brush*/
 
 :root {
-    --main-text-color: #3A3C3B;
+    --main-text-color: rgba(58,60,59, 1);
+    --light-text-color: rgba(58,60,59, 0.75);
     --floral-color: #FFFAF0;
     --snow-color: #FFFAFA;
     --brown-safe-color: #cc6600;
     --gray-color: #3A3C3B;
+    --sepia-bg-color: rgba(239, 219, 203, 0.25);
+    --pink-color: rgba(249, 204, 202, 0.25);
+    --pampas-color: rgb(234, 232, 230);
 }
 
 @viewport{
@@ -18,16 +22,18 @@ html {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: var(--gray-color);
+    color: var(--pampas-color);
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0 0 0 0;
-    background-color: var(--snow-color);
-    background-position: center;
+    background-color: var(--pampas-color);
+/*    background-position: center;
     background-repeat: repeat;
     background-size: contain;
+    background-attachment: fixed;
+    background-image: url(assets/white-construction-paper-texture.jpg);*/
     overflow-x: hidden;
     height: auto;
     width: auto;
@@ -63,15 +69,18 @@ nav {
     background-color: none;
     overflow: hidden;
     position: fixed;
-    left: 10vw;
+    left: 0;
     width: 20%;
     height: 100%;
     max-height: 512px;
-    max-width: 200px;
+    max-width: 256px;
+    overflow: visible;
+    padding: 0 30px 0 30px;
+/*    border: solid;*/
 }
 
 ul {
-    font-family: Poiret One, sans-serif;
+    font-family: Gloock, sans-serif;
     font-size: 1.5em;
     list-style-type: none;
     display: flex;
@@ -79,10 +88,13 @@ ul {
     align-items: stretch;
     justify-content: space-between;
     height: 65%;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
-    padding: 0;
+    font-weight: 400;
+    overflow: visible;
+    padding: 0 0 0 20px;
     margin: 0;
+/*    border: solid;*/
 }
 
 
@@ -179,7 +191,7 @@ a.external {
 }
 
 a.hyperlink:hover, a.external:hover {
-    color: var(--teal-color);
+    color: var(--light-text-color);
     text-decoration: none;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
@@ -335,20 +347,9 @@ a.hyperlink:hover, a.external:hover {
 
 .page {
     position: relative;
-    width: 80%;
-    left: 200px;
-    padding: 5% 5% 5% 0;
-}
-
-.content {
-    height: 80vh;
     width: 80vw;
-    margin: 10vh auto 10vh auto;
-    background-color: none;
-    border: solid;
-    border-color: var(--gray-color);
-    border-width: 4px;
-    overflow: auto;
+    margin-left: auto;
+    padding: 5%;
 }
 
 .text {
@@ -389,9 +390,9 @@ a.hyperlink:hover, a.external:hover {
 }
 
 @media (max-width: 720px) {
-    .page {
+/*    .page {
         width: 100%;
-    }
+    }*/
     .content {
         margin: 6px 0px 6px 0px;
     }
@@ -400,6 +401,12 @@ a.hyperlink:hover, a.external:hover {
     }
     .float {
         padding: 10px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page {
+        width: calc(100vw - 256px);
     }
 }
 

@@ -269,17 +269,9 @@ a.hyperlink:hover, a.external:hover {
     width: 360px;
 }
 
-@media (max-width: 740px), (max-height: 730px) {
-    #splash-name {
-        width: 33vmin;
-        height: 33vmin;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);       
-    }
-    #splash-anchor {
-        font-size: 10vmin;
+@media (max-width: 756px) {
+    #splash {
+        width: 100vw;
     }
 }
 
@@ -293,8 +285,8 @@ a.hyperlink:hover, a.external:hover {
     height: 100vh;
     margin-right: auto;
     padding: 5%;
-    background-image: url("assets/shoot/DSC07886.jpeg"); /* Specify the image URL */
-    background-size: cover; /* Cover the entire container */
+    background-image: url("assets/shoot/DSC07886.jpeg");
+    background-size: cover;
     background-position: center;  
 }
 
@@ -367,16 +359,46 @@ a.hyperlink:hover, a.external:hover {
   border: none;
 }
 
-@media (max-width: 720px) {
-    .content {
-        margin: 6px 0px 6px 0px;
+@media (max-width: 756px) {
+    #portraits {
+        display: none;
     }
-    .text {
-        padding: 10px;
+    .page {
+        width: 100%;
     }
-    .float {
-        padding: 10px;
-    }
+}
+
+/***************/
+/* RSVP button */
+/***************/
+
+.button-container {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    color: var(--main-text-color);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid var(--main-text-color);
+    height: 4em;
+    width: 8em;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--pampas-color);
+    background-color: var(--main-text-color);
+}
+
+button:active {
+    color: var(--main-text-color);
+    background-color: transparent;
 }
 
 /**********************/
@@ -398,6 +420,7 @@ td {
     font-family: Gloock, sans-serif;
     font-weight: 400;
     font-size: 1.5em;
+    color: var(--main-text-color);
     line-height: 2em;
     margin-right: 20px;
 

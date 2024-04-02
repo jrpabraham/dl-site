@@ -239,22 +239,23 @@ a.hyperlink:hover, a.external:hover {
 #splash-container {
     text-align: center;
     background-color: transparent;
-    width: 256px;
-    height: 256px;
+    width: 300px;
+    height: 300px;
     position: absolute;
+    padding: 0;
     z-index:2;
 }
 
 #splash-text {
     text-align: center;
     font-size: 4.7em;
-    line-height: 0.8em;
     position: absolute;
+    left: 10px;
 }
 
 #splash-date {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 0.9em;
     position: absolute;
     bottom: 0;
@@ -421,7 +422,7 @@ button:active {
   height: 150px;
   border-radius: 50%; /* Make the container circular */
   overflow: hidden; /* Hide any overflow from the image */
-  margin: 10px;
+  margin: 10px auto;
 }
 
 .profile img {

@@ -11,7 +11,7 @@
     --gray-color: #3A3C3B;
     --sepia-bg-color: rgba(239, 219, 203, 0.25);
     --pink-color: rgba(249, 204, 202, 0.25);
-    --pampas-color: rgb(234, 232, 230);
+    --pampas-color: rgb(234, 235, 237);
 }
 
 @viewport{
@@ -27,10 +27,11 @@ html {
 
 body {
     margin: 0 0 0 0;
-    background-repeat: repeat;
+/*    background-repeat: repeat;
     background-size: 315px 315px;
     background-attachment: auto;
-    background-image: url(assets/clean_textile.png);
+    background-image: url(assets/clean_textile.png);*/
+    background-color: var(--pampas-color);
     overflow-x: hidden;
     height: auto;
     width: auto;
@@ -63,7 +64,6 @@ body {
 /******************/
 
 nav {
-    background-color: none;
     overflow: hidden;
     position: fixed;
     left: 0;
@@ -131,7 +131,7 @@ h1 {
 h2 {
     font-family: Gloock, sans-serif;
     font-weight: 400;
-    font-size: 2.5em;
+    font-size: 2em;
     color: var(--main-text-color);
 }
 
@@ -209,64 +209,60 @@ a.hyperlink:hover, a.external:hover {
 
 #splash {
     display: flex;
-    height: 100vh;
     position: relative;
-    width: 80vw;
+    width: 50vw;
+    height: 100vh;
     margin-left: auto;
-    background-color: transparent;
+    background-image: url('assets/oscar-helgstrand-oxEhuyAlqYk-unsplash.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center;
     position: relative;
     justify-content: center; /* Horizontally center the inner container */
     align-items: center;
-/*    border: dashed;*/
+}
+
+#splash::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(234, 235, 237, 0.6); /* Adjust the last value (0.5) to set the transparency */
+    z-index: 1; /* Make sure the pseudo-element is above the background image */
 }
 
 #splash-container {
     text-align: center;
     background-color: transparent;
-    width: 512px;
-    height: 512px;
+    width: 256px;
+    height: 256px;
     position: absolute;
-    padding: 0;
-/*    border: solid;*/
+    z-index:2;
 }
 
-#splash-anchor {
+#splash-text {
     text-align: center;
-    font-family: 'Aboreto', sans-serif;
     font-size: 4.7em;
-    font-variant: small-caps;
-    color: var(--teal-color);
     line-height: 0.9em;
-    letter-spacing: 0.1em;
     position: absolute;
 }
 
-#splash-lea {
-    animation: fadeIn 2s;
+#splash-date {
+    text-align: center;
+    font-size: 2em;
+    line-height: 0.9em;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    z-index:2;
 }
 
-#splash-mark {
-    animation: fadeIn 4s;
-}
-
-#splash-anchor .et {
-    font-family: 'Ms Madi', cursive;
-    font-size: 0.5em;
-    font-variant: normal;
-    font-weight: 400;
-    letter-spacing: normal;
+#splash-image {
     display: block;
-    animation: fadeIn 3s;
-}
-
-#splash-decor {
-    max-height: 100vh;
-    max-width: 100vw;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    height: 360px;
+    width: 360px;
 }
 
 @media (max-width: 740px), (max-height: 730px) {
@@ -283,74 +279,51 @@ a.hyperlink:hover, a.external:hover {
     }
 }
 
-/*******************/
-/* Art Deco border */
-/*******************/
-
-.deco {
-    border: 4px solid;
-    border-color: var(--gold-color);
-    position: relative;
-}
-
-.deco:before, .deco:after {
-    border: 2px solid;
-    border-color: var(--gold-color);
-    content: "";
-    position: absolute;
-    z-index: -1;  
-}
-
-.deco:before {
-    top: -10px;
-    right: 4px;
-    bottom: -10px;
-    left: 4px;
-}
-
-.deco:after {
-    top: 4px;
-    right: -10px;
-    bottom: 4px;
-    left: -10px;
-}
-
-@media (max-width: 720px) {
-
-    .deco, .deco:before, .deco:after {
-        border-left: none;
-        border-right: none;
-    }
-
-}
-
 /************/
 /* Sections */
 /************/
 
+#portraits {
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    margin-right: auto;
+    padding: 5%;
+    background-image: url("assets/shoot/DSC07886.jpeg"); /* Specify the image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center;  
+}
+
 .line-box {
     display: flex;
     align-items: center;
-    width: 100%;
     margin: 0;
     padding: 0;
 }
 
-.line-box hr {
+.line-box hr.left {
     flex: 1;
     border: none;
     height: 1px;
     width: 80%;
     background-color: #000; /* You can customize the color */
-    margin: 0 30px; /* Adjust the margin as needed */
+    margin: 0 15px 0 0; /* Adjust the margin as needed */
+}
+
+.line-box hr.right {
+    flex: 1;
+    border: none;
+    height: 1px;
+    width: 80%;
+    background-color: #000; /* You can customize the color */
+    margin: 0 0 0 15px; /* Adjust the margin as needed */
 }
 
 .page {
     position: relative;
-    width: 80vw;
+    width: 50vw;
     margin-left: auto;
     padding: 5%;
-/*    border: dotted;*/
 }
 
 .text {
@@ -391,9 +364,6 @@ a.hyperlink:hover, a.external:hover {
 }
 
 @media (max-width: 720px) {
-/*    .page {
-        width: 100%;
-    }*/
     .content {
         margin: 6px 0px 6px 0px;
     }
@@ -402,12 +372,6 @@ a.hyperlink:hover, a.external:hover {
     }
     .float {
         padding: 10px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .page {
-        width: calc(100vw - 256px);
     }
 }
 
@@ -429,7 +393,7 @@ a.hyperlink:hover, a.external:hover {
 }
 
 .side-a {
-    width: 38.2%;
+    width: 50%;
     padding: 10px;
 
 }
@@ -472,14 +436,6 @@ img.story {
     display: inline;
     width: 50%;
 }
-
-#splash-image {
-    display: block;
-    margin: 0 auto;
-    height: 360px;
-    width: 360px;
-}
-
 
 .divider {
     width: 80%;

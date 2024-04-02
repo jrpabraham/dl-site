@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gloock|Marcellus+SC|Bodoni+Moda|Poiret+One|La+Belle+Aurore|Jost:100,200,300|Italiana|Qwitcher+Grypen:400,700|Allura|Josefin+Sans:100,200,300|Playfair+Display+SC ');
+@import url('https://fonts.googleapis.com/css?family=Gloock|Marcellus+SC|Bodoni+Moda|Poiret+One|La+Belle+Aurore|Jost:100,200,300,400,500,600|Italiana|Qwitcher+Grypen:400,700|Allura|Josefin+Sans:100,200,300,400,500,600|Playfair+Display+SC ');
 
 /*Oswald|Marcellus|Bodoni+Moda|Italiana|Antic+Didone|Cormorant+SC|Noto+Serif+Display|Licorice|Meow+Script|Allura|Alex+Brush*/
 
@@ -20,7 +20,7 @@
 
 html {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     scroll-behavior: smooth;
 }
@@ -120,7 +120,7 @@ ul {
 
 h1 {
     font-family: 'La Belle Aurore', cursive;
-    font-size: 3em;
+    font-size: 2.5em;
     font-variant: normal;
     font-weight: 400;
     text-align: center;
@@ -137,8 +137,7 @@ h2 {
 
 h3 {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
+    font-weight: 600;
     color: var(--main-text-color);
 }
 
@@ -159,7 +158,7 @@ h3 {
 }
 
 p, q {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: justify;
 }
 
@@ -191,6 +190,11 @@ a.hyperlink:hover, a.external:hover {
     text-decoration: none;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
+}
+
+.superscript {
+    vertical-align: super;
+    font-size: smaller;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -250,11 +254,11 @@ a.hyperlink:hover, a.external:hover {
 
 #splash-date {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 0.9em;
     position: absolute;
     bottom: 0;
-    left: 15px;
+    left: 20px;
     z-index:2;
 }
 
@@ -307,7 +311,7 @@ a.hyperlink:hover, a.external:hover {
     height: 1px;
     width: 80%;
     background-color: #000; /* You can customize the color */
-    margin: 0 15px 0 0; /* Adjust the margin as needed */
+    margin: 0 20px 0 0; /* Adjust the margin as needed */
 }
 
 .line-box hr.right {
@@ -316,7 +320,7 @@ a.hyperlink:hover, a.external:hover {
     height: 1px;
     width: 80%;
     background-color: #000; /* You can customize the color */
-    margin: 0 0 0 15px; /* Adjust the margin as needed */
+    margin: 0 0 0 20px; /* Adjust the margin as needed */
 }
 
 .page {
@@ -375,6 +379,29 @@ a.hyperlink:hover, a.external:hover {
     }
 }
 
+/**********************/
+/* Schedule of events */
+/**********************/
+
+.schedule {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: left;
+    vertical-align: top;
+}
+
+.schedule-time {
+    font-family: Gloock, sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 2em;
+    margin-right: 20px;
+
+}
 /******************/
 /* Party profiles */
 /******************/

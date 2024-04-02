@@ -4,7 +4,7 @@
 
 :root {
     --main-text-color: rgba(58,60,59, 1);
-    --light-text-color: rgba(58,60,59, 0.75);
+    --highlight-color: rgba(58,60,59, 0.75);
     --floral-color: #FFFAF0;
     --snow-color: #FFFAFA;
     --brown-safe-color: #cc6600;
@@ -22,18 +22,15 @@ html {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: var(--pampas-color);
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0 0 0 0;
-    background-color: var(--pampas-color);
-/*    background-position: center;
     background-repeat: repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-image: url(assets/white-construction-paper-texture.jpg);*/
+    background-size: 315px 315px;
+    background-attachment: auto;
+    background-image: url(assets/clean_textile.png);
     overflow-x: hidden;
     height: auto;
     width: auto;
@@ -76,11 +73,10 @@ nav {
     max-width: 256px;
     overflow: visible;
     padding: 0 30px 0 30px;
-/*    border: solid;*/
 }
 
 ul {
-    font-family: Gloock, sans-serif;
+    font-family: Gloock, serif;
     font-size: 1.5em;
     list-style-type: none;
     display: flex;
@@ -133,9 +129,9 @@ h1 {
 }
 
 h2 {
-    font-family: 'La Belle Aurore', cursive;
+    font-family: Gloock, sans-serif;
     font-weight: 400;
-    font-size: 3em;
+    font-size: 2.5em;
     color: var(--main-text-color);
 }
 
@@ -191,7 +187,7 @@ a.external {
 }
 
 a.hyperlink:hover, a.external:hover {
-    color: var(--light-text-color);
+    color: var(--highlight-color);
     text-decoration: none;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
@@ -212,22 +208,26 @@ a.hyperlink:hover, a.external:hover {
 /***************/
 
 #splash {
+    display: flex;
     height: 100vh;
-    width: 100vw;
-    margin: 0 0;
+    position: relative;
+    width: 80vw;
+    margin-left: auto;
     background-color: transparent;
     position: relative;
+    justify-content: center; /* Horizontally center the inner container */
+    align-items: center;
+/*    border: dashed;*/
 }
 
-#splash-name {
+#splash-container {
     text-align: center;
     background-color: transparent;
-    width: 250px;
-    height: 250px;
+    width: 512px;
+    height: 512px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 0;
+/*    border: solid;*/
 }
 
 #splash-anchor {
@@ -350,6 +350,7 @@ a.hyperlink:hover, a.external:hover {
     width: 80vw;
     margin-left: auto;
     padding: 5%;
+/*    border: dotted;*/
 }
 
 .text {
@@ -470,6 +471,13 @@ img.inline {
 img.story {
     display: inline;
     width: 50%;
+}
+
+#splash-image {
+    display: block;
+    margin: 0 auto;
+    height: 360px;
+    width: 360px;
 }
 
 

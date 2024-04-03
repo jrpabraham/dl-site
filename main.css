@@ -222,8 +222,8 @@ input:checked + .slide-container .nav label { display: block; }
 /* Burger */
 
 .menu-burger svg {
-  height: 48px;
-  width: 48px;
+  height: 36px;
+  width: 36px;
   z-index: 3;
   color: var(--main-text-color);
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
@@ -232,7 +232,7 @@ input:checked + .slide-container .nav label { display: block; }
 /* Menu items */
 
 ul.menu-burger__item-list {
-    font-family: Gloock, sans-serif;
+    font-family: Gloock, serif;
     font-weight: 400;
     font-size: 2em;
     color: var(--main-text-color);
@@ -265,7 +265,7 @@ ul.menu-burger__item-list {
 
 ul.menu-burger__item-list li {
     vertical-align: middle;
-    margin: 5%;
+    margin: 2%;
 }
 
 /* Menu fold-out */
@@ -332,6 +332,21 @@ input:checked ~ .menu-burger__item-list {
 /* Text formatting */
 /*******************/
 
+.fleuron {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.fleuron img {
+    height: 40px;
+    width: auto;
+}
+
 .names {
     text-align: center;
     font-family: 'Aboreto', sans-serif;
@@ -363,7 +378,7 @@ h1 {
 }
 
 h2 {
-    font-family: Gloock, sans-serif;
+    font-family: Gloock, serif;
     font-weight: 400;
     font-size: 2em;
     color: var(--main-text-color);
@@ -490,8 +505,8 @@ a.hyperlink:hover, a.external:hover {
 
 #splash-date {
     text-align: center;
-    font-size: 2em;
-    line-height: 0.9em;
+    font-size: 1.5em;
+    line-height: 1em;
     position: absolute;
     bottom: 0;
     left: 20px;
@@ -668,7 +683,7 @@ button:active {
 }
 
 .schedule-time {
-    font-family: Gloock, sans-serif;
+    font-family: Gloock, serif;
     font-weight: 400;
     font-size: 1.5em;
     color: var(--main-text-color);

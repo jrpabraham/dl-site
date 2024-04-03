@@ -81,6 +81,7 @@ body {
   height: 48px;
   width: 48px;
   z-index: 3;
+  color: var(--main-text-color);
 }
 
 /* Menu items */

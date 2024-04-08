@@ -19,6 +19,10 @@
 	zoom: 1.0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 18px;
@@ -347,26 +351,6 @@ input:checked ~ .menu-burger__item-list {
 	width: auto;
 }
 
-.names {
-	text-align: center;
-	font-family: 'Aboreto', sans-serif;
-	font-size: 4.5em;
-	font-variant: small-caps;
-	color: var(--teal-color);
-	line-height: 0.9em;
-	letter-spacing: 0.1em;
-}
-
-.names .et {
-	font-family: 'Ms Madi', cursive;
-	font-size: 0.5em;
-	font-variant: normal;
-	font-weight: 400;
-	letter-spacing: normal;
-	display: inline;
-	vertical-align: middle;
-}
-
 h1 {
 	font-family: 'La Belle Aurore', cursive;
 	font-size: 2.5em;
@@ -389,22 +373,6 @@ h3 {
 	font-weight: 600;
 	font-size: 1em;
 	color: var(--main-text-color);
-}
-
-.party-name {
-	font-family: 'Aboreto', sans-serif;
-	font-weight: 400;
-	font-size: 1.2em;
-	color: var(--main-text-color);
-	text-align: left;
-}
-
-.party-role {
-	font-family: 'Ms Madi', cursive;
-	font-size: 1.6em;
-	color: var(--main-text-color);
-	text-align: left;
-	white-space: nowrap;
 }
 
 p, q {
@@ -572,43 +540,15 @@ a.hyperlink:hover, a.external:hover {
 	padding: 0px 10% 20px 10%;
 }
 
-.icontainer {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	margin: auto;
-	padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-	box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
-}
-
-#google-form {
-	border: none;
-	height: 100%;
-	width: 100%;
-	margin-top: 40px;
-	min-height: 150vh;
-}
-
-#engagement-video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	border: none;
-}
-
 @media (max-width: 768px) {
 	.page {
 		width: 100%;
 	}
 }
 
-/***************/
-/* RSVP button */
-/***************/
+/***********/
+/* Buttons */
+/***********/
 
 .button-container {
 	text-align: center;
@@ -650,15 +590,23 @@ button:active {
 	border-collapse: collapse;
 }
 
-.entourage td.bio {
+.entourage td.bio-left {
 	text-align: center;
 	vertical-align: middle;
-	padding: 0 20px 0 20px;
+	padding-right: 20px;
+}
+
+.entourage td.bio-right {
+	text-align: center;
+	vertical-align: middle;
+	padding-left: 20px;
 }
 
 .entourage td.profile {
 	text-align: center;
 	vertical-align: middle;
+	padding: 0;
+	margin: 0;
 }
 
 .profile {
@@ -713,46 +661,6 @@ span.profile-role {
 
 }
 
-/******************/
-/* Party profiles */
-/******************/
-
-.profiles {
-	display: flex;
-	padding: 0px 10% 20px 10%;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	row-gap: 20px;
-}
-
-.groomsmen {
-	flex-flow: row-reverse wrap;
-}
-
-.side-a {
-	width: 50%;
-	padding: 10px;
-
-}
-
-.side-b {
-	width: 61.8%;
-	padding: 0px 0px 0px 20px;
-	text-align: left;
-
-}
-
-.groomsmen .side-b {
-	padding: 0px 20px 0px 0px;
-}
-
-@media (max-width: 720px) {
-	.side-a, .side-b {
-		width: 100%;
-	}
-}
-
 /**********/
 /* Images */
 /**********/
@@ -793,103 +701,3 @@ img.story {
 		width: 100%;
 	}
 }
-
-/*/////////*/
-/* Gallery */
-/*/////////*/
-
-a.thumbnail, a.thumbnail:hover {
-	text-decoration: none;
-	background-color: unset;
-	background: var(--main-bg-color);
-	width: 100%;
-}
-
-img.thumbnail {
-	width: 100%;
-	transition: transform 2s, filter 0.1s ease-in-out;
-}
-
-img.thumbnail:hover {
-	filter: opacity(70%);
-}
-
-a.lightbox, a.lightbox:hover {
-	/** Default lightbox to hidden */
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: opacity 200ms, visibility 200ms;
-	transition: opacity 200ms, visibility 200ms;
-	/** Position and style */
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.8);
-	z-index: 99;
-}
-
-a.lightbox img {
-	/** Pad the lightbox image */
-	max-width: 90vw;
-	max-height: 90vh;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	z-index: 99;
-}
-
-a.lightbox:target {
-	/** Remove default browser outline */
-	outline: none;
-
-	/** Unhide lightbox **/
-	visibility: visible;
-	opacity: 1;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.photo-row {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-
-.photo-column {
-	flex: 50%;
-	max-width: 50%;
-	padding: 0 4px;
-}
-
-.photo-column .responsive {
-	margin-top: 8px;
-	vertical-align: middle;
-	width: 100%;
-	overflow: hidden;
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 720px) {
-	.photo-column {
-	flex: 100%;
-	max-width: 100%;
-	}
-}
-

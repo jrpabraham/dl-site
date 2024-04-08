@@ -48,12 +48,12 @@ body {
 }
 
 @keyframes slideUp {
-  0% {
+	0% {
 	transform: translateY(100%);
-  }
-  100% {
+	}
+	100% {
 	transform: translateY(0);
-  }
+	}
 }
 
 /*************/
@@ -205,28 +205,28 @@ input:checked + .slide-container .nav label { display: block; }
 /******************/
 
 .menu-burger > * {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
 }
 
 /* Invisible click handler indicating whether menu is collapsed */
 .menu-burger input {
-  height: 48px;
-  margin: 0;
-  opacity: 0;
-  width: 48px;
-  z-index: 4;
+	height: 48px;
+	margin: 0;
+	opacity: 0;
+	width: 48px;
+	z-index: 4;
 }
 
 /* Burger */
 
 .menu-burger svg {
-  height: 36px;
-  width: 36px;
-  z-index: 3;
-  color: var(--main-text-color);
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+	height: 36px;
+	width: 36px;
+	z-index: 3;
+	color: var(--main-text-color);
+	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* Menu items */
@@ -270,55 +270,55 @@ ul.menu-burger__item-list li {
 
 /* Menu fold-out */
 input:checked ~ .menu-burger__item-list {
-  transform: none;
+	transform: none;
 }
 
 /* Change line color on fold-out */
 .menu-burger input:checked ~ svg line {
-  stroke: #3c3836;
+	stroke: #3c3836;
 }
 
 /* Set transform origins to center of respective line */
 .menu-burger svg line:nth-of-type(1)
 {
-  transform-origin: center 6px;
+	transform-origin: center 6px;
 }
 
 .menu-burger svg line:nth-of-type(2)
 {
-  transform-origin: center 12px;
+	transform-origin: center 12px;
 }
 
 .menu-burger svg line:nth-of-type(3)
 {
-  transform-origin: center 18px;
+	transform-origin: center 18px;
 }
 
 /* Line animations */
 .menu-burger svg line {
-  transition-duration: 0.5s;
-  transition-property:
+	transition-duration: 0.5s;
+	transition-property:
 	stroke,
 	opacity,
 	transform;
-  transition-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
+	transition-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
 }
 
 /* Fade out middle line on fold-out */
 .menu-burger input:checked ~ svg line:nth-of-type(2) {
-  opacity: 0;
-  transform: scale(0.2);
+	opacity: 0;
+	transform: scale(0.2);
 }
 
 /* Center top and bottom lines vertically, then rotate by 45 degrees in opposing directions on fold-out */
 .menu-burger input:checked ~ svg line:nth-of-type(1)
 {
-  transform: translate(0, 6px) rotate(45deg);
+	transform: translate(0, 6px) rotate(45deg);
 }
 
 .menu-burger input:checked ~ svg line:nth-of-type(3)
 {
-  transform: translate(0, -6px) rotate(-45deg);
+	transform: translate(0, -6px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -387,6 +387,7 @@ h2 {
 h3 {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 600;
+	font-size: 1em;
 	color: var(--main-text-color);
 }
 
@@ -447,13 +448,13 @@ a.hyperlink:hover, a.external:hover {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: var(--white-color);
-  background: var(--teal-color);
+	color: var(--white-color);
+	background: var(--teal-color);
 }
 
 ::selection {
-  color: var(--white-color);
-  background: var(--teal-color);
+	color: var(--white-color);
+	background: var(--teal-color);
 }
 
 /***************/
@@ -589,14 +590,14 @@ a.hyperlink:hover, a.external:hover {
 }
 
 #engagement-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
 }
 
 @media (max-width: 768px) {
@@ -645,17 +646,19 @@ button:active {
 .entourage {
 	width: 100%;
 	margin: 0;
+	padding: 0;
 	border-collapse: collapse;
 }
 
-.entourage td {
-    text-align: center;
-    vertical-align: middle;
-/*	border: solid;*/
+.entourage td.bio {
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 20px 0 20px;
 }
 
-.entourage p {
-	padding: 0px;
+.entourage td.profile {
+	text-align: center;
+	vertical-align: middle;
 }
 
 .profile {
@@ -674,6 +677,9 @@ button:active {
 span.profile-name {
 	font-family: 'La Belle Aurore', cursive;
 	font-size: 1.5em;
+	padding: 0;
+	margin: 0;
+	line-height: 1.5em;
 }
 
 span.profile-role {
@@ -700,7 +706,7 @@ span.profile-role {
 .schedule-time {
 	font-family: Gloock, serif;
 	font-weight: 400;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	color: var(--main-text-color);
 	line-height: 2em;
 	margin-right: 20px;
@@ -793,97 +799,97 @@ img.story {
 /*/////////*/
 
 a.thumbnail, a.thumbnail:hover {
-  text-decoration: none;
-  background-color: unset;
-  background: var(--main-bg-color);
-  width: 100%;
+	text-decoration: none;
+	background-color: unset;
+	background: var(--main-bg-color);
+	width: 100%;
 }
 
 img.thumbnail {
-  width: 100%;
-  transition: transform 2s, filter 0.1s ease-in-out;
+	width: 100%;
+	transition: transform 2s, filter 0.1s ease-in-out;
 }
 
 img.thumbnail:hover {
-  filter: opacity(70%);
+	filter: opacity(70%);
 }
 
 a.lightbox, a.lightbox:hover {
-  /** Default lightbox to hidden */
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 200ms, visibility 200ms;
-  transition: opacity 200ms, visibility 200ms;
-  /** Position and style */
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 99;
+	/** Default lightbox to hidden */
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 200ms, visibility 200ms;
+	transition: opacity 200ms, visibility 200ms;
+	/** Position and style */
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99;
 }
 
 a.lightbox img {
-  /** Pad the lightbox image */
-  max-width: 90vw;
-  max-height: 90vh;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 99;
+	/** Pad the lightbox image */
+	max-width: 90vw;
+	max-height: 90vh;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 99;
 }
 
 a.lightbox:target {
-  /** Remove default browser outline */
-  outline: none;
+	/** Remove default browser outline */
+	outline: none;
 
-  /** Unhide lightbox **/
-  visibility: visible;
-  opacity: 1;
+	/** Unhide lightbox **/
+	visibility: visible;
+	opacity: 1;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .photo-row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
 }
 
 /* Create four equal columns that sits next to each other */
 
 .photo-column {
-  flex: 50%;
-  max-width: 50%;
-  padding: 0 4px;
+	flex: 50%;
+	max-width: 50%;
+	padding: 0 4px;
 }
 
 .photo-column .responsive {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-  overflow: hidden;
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	overflow: hidden;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 720px) {
-  .photo-column {
+	.photo-column {
 	flex: 100%;
 	max-width: 100%;
-  }
+	}
 }
 

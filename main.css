@@ -11,7 +11,7 @@
 	--gray-color: #3A3C3B;
 	--sepia-bg-color: rgba(239, 219, 203, 0.25);
 	--pink-color: rgba(249, 204, 202, 0.25);
-	--pampas-color: rgb(234, 235, 237);
+	--pampas-color: rgb(233, 233, 233);
 	--gold-color: rgb(244, 207, 161);
 }
 
@@ -435,7 +435,7 @@ a.hyperlink:hover, a.external:hover {
 	width: 50vw;
 	height: 100vh;
 	margin-left: auto;
-	background-image: url('assets/oscar-helgstrand-oxEhuyAlqYk-unsplash.jpg');
+	background-image: url('assets/oscar-helgstrand-warm.jpg');
 	background-size: cover; /* Cover the entire container */
 	background-position: center;
 	position: relative;

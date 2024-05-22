@@ -13,6 +13,7 @@
 	--pink-color: rgba(249, 204, 202, 0.25);
 	--pampas-color: rgb(233, 233, 233);
 	--gold-color: rgb(244, 207, 161);
+	--blue-color: rgb(88, 109, 127);
 }
 
 @viewport{
@@ -487,11 +488,11 @@ a.hyperlink:hover, a.external:hover {
 }
 
 .splash-text:nth-child(2) {
-	animation: fadeIn 1s ease-in-out 0.5s forwards;
+	animation: fadeIn 1s ease-in-out 0.25s forwards;
 }
 
 .splash-text:nth-child(3) {
-	animation: fadeIn 1s ease-in-out 1s forwards;
+	animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 
 #splash-date {
